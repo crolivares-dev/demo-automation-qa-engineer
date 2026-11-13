@@ -15,7 +15,8 @@ Feature: Inicio de Sesión en Sauce Demo
     Then se muestra el mensaje de error "<mensaje_esperado>"
 
     Examples:
-      | usuario         | contrasena   | mensaje_esperado                                                          |
-      | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out.                       |
-      | standard_user   | bad_password | Epic sadface: Username and password do not match any user in this service |
-      |                 |              | Epic sadface: Username is required                                        |
+      | usuario         | contrasena    | mensaje_esperado                                                          |
+      | locked_out_user | secret_sauce  | Epic sadface: Sorry, this user has been locked out.                       |
+      | standard_user   | bad_password  | Epic sadface: Username and password do not match any user in this service |
+      |                 |               | Epic sadface: Username is required                                        |
+      | standard_user   | clave_erronea | Epic sadface: Texto que no corresponde                                    |
